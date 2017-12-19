@@ -12,3 +12,4 @@ Notes:
 button and the program will continue as normal.
 * The application outputs a legible output that includes the functional label (e.g. noun, transitive verb, adjective) and the actual
 definition. However, the output is not well-organized.
+* The keyboard can only be closed by pressing the button at the bottom bar to hide the keyboard. If the definition goes past the screen, the TextView is contained in a ScrollView widget to let the user scroll down.
