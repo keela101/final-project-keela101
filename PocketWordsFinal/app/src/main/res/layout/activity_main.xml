@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="com.chapman.seankeelan.pocketwordsfinal.activities.MainActivity">
+
+    <!-- <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="@string/pocket_words"
+        android:textSize="30sp"
+        /> -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_logo"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/iv_mw_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mw_logo_light_background_50x50"
+            android:contentDescription="@string/pocket_words"
+            android:tag="Powered by Merriam-Webster"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:id="@+id/tv_mw_logo_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/powered_by_merriam_webster"
+            android:textSize="10sp"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/pocket_words_logo"
+        android:contentDescription="@string/pocket_words" />
+
+    <EditText
+        android:id="@+id/et_searchbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_word"
+        android:layout_below="@+id/iv_logo"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb_loading_wheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/et_searchbar"
+        android:layout_below="@+id/iv_logo"
+        android:indeterminate="true"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/vg_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/et_searchbar">
+        <Button
+            android:id="@+id/btn_define"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/define_it"/>
+        <Button
+            android:id="@+id/btn_translate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/span_eng"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_searched_word"
+        android:layout_below="@+id/vg_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/word"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:id="@+id/sv_full_definition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_searched_word"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/vg_full_definition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_word_definition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/definition"
+                android:textSize="15sp"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_translation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv_full_definition"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/vg_translation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <TextView
+                android:id="@+id/tv_translation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/translation"
+                android:textSize="15sp"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

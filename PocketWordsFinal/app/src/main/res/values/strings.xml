@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PocketWordsFinal</string>
+    <string name="back_to_menu">Back to Menu</string>
+    <string name="pocket_words">Pocket Words</string>
+    <string name="enter_word">Enter your word here:</string>
+    <string name="word">Word</string>
+    <string name="definition">Definition</string>
+    <string name="in_spanish">In Spanish</string>
+    <string name="in_english">In English</string>
+    <string name="define_it">Define it</string>
+    <string name="span_eng"><![CDATA[Span <-> Eng]]></string>
+    <string name="eng_span"><![CDATA[eng -> span]]></string>
+    <string name="functional_label">Functional Label</string>
+    <string name="powered_by_merriam_webster">Powered by Merriam-Webster</string>
+    <string name="translation">Translation</string>
+</resources>
